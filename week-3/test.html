@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>First_week_assignment</title>
+<link rel='stylesheet' type='text/css' href='1_w.css'>
+
+<script>
+    window.onload = myFunction;
+    
+    function myFunction(){
+        var main = document.getElementById('containter3_id');
+        var _1div = document.createElement("div");
+        _1div.className = "section";
+
+        var _2div = document.createElement("div");
+        _2div.className = "photo";
+        var img = document.createElement('img');
+        img.src = 'https://www.travel.taipei/d_upload_ttn/sceneadmin/pic/11000848.jpg';
+        _2div.appendChild(img);        
+
+        var _3div = document.createElement("div");
+        _3div.className = "word";
+        var text = document.createTextNode("snowite2");
+        _3div.appendChild(text); 
+
+        _2div.appendChild(_3div)   
+        _1div.appendChild(_2div)
+        main.appendChild(_1div);
+        
+    }
+</script>
+    
+
+</head>
+<body>
+<div class='containter1'>
+    <div>My Website</div>
+
+    <div class="desktop">
+        <span class="item">Item1</span>
+        <span class="item">Item2</span>
+        <span class="item">Item3</span>
+        <span class="item">Item4</span>
+    </div>
+    <div class="mobile">
+        <img src="hamburger.png" width="20" height="20"/>
+    </div>
+</div>
+
+<div class='containter2'>
+<div class="home">Welcome to MyHome</div>
+</div>
+
+<div class="containter3" id='containter3_id'></div>
+
+</body>
+</html>
