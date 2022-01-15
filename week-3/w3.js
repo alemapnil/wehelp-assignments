@@ -1,6 +1,7 @@
 var start = 0, end = 8;
 var btn = document.getElementById("btn");
 var url = 'https://alemapnil.github.io/wehelp-assignments/data/site.json';
+var result;
 
 function myFunction(photo_url, site_name){
     var main = document.getElementById('containter3_id');
@@ -27,9 +28,8 @@ function myFunction(photo_url, site_name){
     main.appendChild(_1div)}
 
 
-
-
-fetch(url).then(function(response) {return response.json()}).then(function(result){
+fetch(url).then(function(response) {return response.json()}).then(function(ele){
+    result = ele;
     let resulted = result.slice(start,end)
     start+=8; end+=8;
 
@@ -43,8 +43,6 @@ fetch(url).then(function(response) {return response.json()}).then(function(resul
 
     
 function catchJson(){
-
-fetch(url).then(function(response) {return response.json()}).then(function(result){
     let resulted = result.slice(start,end)
     start+=8; end+=8;
 
@@ -52,11 +50,11 @@ fetch(url).then(function(response) {return response.json()}).then(function(resul
     for (let site of resulted){
         for (let s in site) {
             if (s==='file'){var photo_url = site[s]};
-            if (s==='stitle'){var site_name = site[s]};}
+            if (s==='stitle'){var site_name = site[s]};
+        }
           myFunction(photo_url, site_name); 
-        }});
-    
-    if (end >58 ){btn.style.display='none';}
+        };
+    if (end > 64 ){btn.style.display='none';}
         
 }
 
