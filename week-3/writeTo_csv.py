@@ -21,4 +21,3 @@ with open('data.csv','a', newline='') as f:
         print('---------------')
         writer.writerow([stitle,address,longitude,latitude,file])
 
-

@@ -5,29 +5,33 @@
 <link rel='stylesheet' type='text/css' href='1_w.css'>
 
 <script>
-    window.onload = myFunction;
+    // window.onload = myFunction;
     
-    function myFunction(){
-        var main = document.getElementById('containter3_id');
-        var _1div = document.createElement("div");
-        _1div.className = "section";
+    // function myFunction(){
+    //     var main = document.getElementById('containter3_id');
+    //     var _1div = document.createElement("div");
+    //     _1div.className = "section";
 
-        var _2div = document.createElement("div");
-        _2div.className = "photo";
-        var img = document.createElement('img');
-        img.src = 'https://www.travel.taipei/d_upload_ttn/sceneadmin/pic/11000848.jpg';
-        _2div.appendChild(img);        
+    //     var _2div = document.createElement("div");
+    //     _2div.className = "photo";
+    //     var img = document.createElement('img');
+    //     img.src = 'https://www.travel.taipei/d_upload_ttn/sceneadmin/pic/11000848.jpg';
+    //     _2div.appendChild(img);        
 
-        var _3div = document.createElement("div");
-        _3div.className = "word";
-        var text = document.createTextNode("snowite2");
-        _3div.appendChild(text); 
+    //     var _3div = document.createElement("div");
+    //     _3div.className = "word";
+    //     var text = document.createTextNode("snowite2");
+    //     _3div.appendChild(text); 
 
-        _2div.appendChild(_3div)   
-        _1div.appendChild(_2div)
-        main.appendChild(_1div);
+    //     _2div.appendChild(_3div)   
+    //     _1div.appendChild(_2div)
+    //     main.appendChild(_1div);
+    fetch('./data.csv').then(function(response) {
+        console.log(response);
+    })
+
+
         
-    }
 </script>
     
 
