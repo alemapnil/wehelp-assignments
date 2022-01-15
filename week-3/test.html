@@ -26,9 +26,10 @@
     //     _2div.appendChild(_3div)   
     //     _1div.appendChild(_2div)
     //     main.appendChild(_1div);
-    fetch('./data.csv').then(function(response) {
-        console.log(response);
-    })
+    let url = 'https://alemapnil.github.io/wehelp-assignments/additional_data/data.json';
+
+    fetch(url).then(function(response) {
+    console.log(response.json())})
 
 
         
