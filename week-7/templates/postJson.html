@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <link rel="shortcut icon" href="#">
+
+    <title>更新會員姓名</title>
+</head>
+<body>
+
+<h2>更新會員姓名</h2>
+
+<form id='form' method="post">
+    <input type='text' id='change_name' placeholder="請輸入新的姓名"/>
+    <input type='submit' value="修改" style="cursor: pointer"/>
+    <h4 id="submitResult"></h4>
+</form>
+
+<script>
+var form = document.getElementById('form');
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+
+    let newName= document.getElementById('change_name').value
+    document.getElementById('change_name').value = ''
+    let submitResult = document.getElementById('submitResult')
+
+    if (newName === ''){ submitResult.innerHTML='輸入的值為空白'}
+    else{    
+        fetch("/apiResult",{
+        'method':'POST',
+        body:JSON.stringify({"name":newName}),
+        headers:{
+            "Content-Type":"application/json; charset=UTF-8",
+            'Accept': 'application/json'
+        }
+        })
+        .then(function(response){
+            return response.json();
+            })
+        .catch(error => console.error('Error:', error))
+        .then(function(result){
+            submitResult.innerHTML='請去開發人員工具Network的apiResult看請求與回應結果'
+        });
+    }
+})
+
+</script>
+</body>
+</html>

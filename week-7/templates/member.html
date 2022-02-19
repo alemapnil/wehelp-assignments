@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="#">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>會員頁</title>
+<style>
+body{
+    margin:0;
+    
+}
+.container1{
+    height: 150px;
+    background-color: #086A87;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight:bold;
+}
+.container2{
+    margin:0px auto;
+    margin-top: 30px;
+    width: 360px;
+    text-align: center;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class='container1'>歡迎光臨，這是會員頁</div>
+<div class='container2'>
+    <div id='inputname_id'style="font-size: large;">{{inputname}}，歡迎登入系統</div><br/>
+    <div style="font-size: large;"><a href='/signout'>登出系統</a></div><br/><br/>
+    <div style="font-size: large;font-weight: bold; ">查詢會員姓名</div><br/>
+    <div >
+        <input type='text' id='search_name' placeholder="請輸入該會員帳號" style="height:20px; margin: 5px;" />
+        <button onclick="searchName();" style="height:25px; cursor: pointer">查詢</button>
+        <div id='search_result' style="font-size: x-large;"></div><br/>
+    </div> 
+    <br>
+    <div style="font-size: large;font-weight: bold; ">更新我的姓名</div><br/>
+    <form id='form' method="post">
+        <input type='text' id='change_name' placeholder="輸入新的姓名" style="height:20px; margin: 5px;"/>
+        <input type='submit' value="更新" style="height:25px; cursor: pointer"/>
+        <div id='submitResult' style="font-size: x-large;"></div><br/>
+    </form>
+
+</div>
+<script type="text/javascript" src="../static/w7.js?v=1"></script>
+</body>
+</html>

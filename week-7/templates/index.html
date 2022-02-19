@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="#">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>首頁</title>
+<style>
+body{
+    margin:0;
+    
+}
+.container1{
+    height: 150px;
+    background-color: #086A87;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight:bold;
+}
+.container2{
+    margin:0px auto;
+    margin-top: 30px;
+    width: 360px;
+    text-align: center;
+}
+button{
+    cursor: pointer;
+}
+input{
+    height: 20px;
+    margin-left: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class='container1'>歡迎光臨，請註冊登入系統</div>
+
+<div class='container2'>
+    <h2>註冊帳號</h2>
+    <form action="/register" method="post">
+        <div>姓名<input type='text' name='name'/></div><br/>
+        <div>帳號<input type='text' name='account'/></div><br/>
+        <div>密碼<input type='password' name='password'/></div><br/>
+        <button>註冊</button>
+    </form>
+</div>
+<br>
+<hr>
+<div class='container2'>
+    <h2>登入系統</h2>
+    <form action="/signin" method="post">
+        <div>帳號<input type='text' name='account'/></div><br/>
+        <div>密碼<input type='password' name='password'/></div><br/>
+        <button>登入</button>
+    </form>
+</div>
+
+</body>
+</html>
